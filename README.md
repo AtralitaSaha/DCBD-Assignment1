@@ -1,5 +1,3 @@
-# DCBD-Assignment1
-MapReduce for finding top 10 first words
 # DCBD Assignment 1 - MapReduce for Top 10 First Words
 
 ## Student Information
