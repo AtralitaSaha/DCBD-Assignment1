@@ -1,5 +1,14 @@
-FROM python:3.9-alpine 
-WORKDIR /app 
-COPY mapper_reducer.py . 
-RUN pip3 install --no-cache-dir --break-system-packages requests 
-CMD ["python3", "mapper_reducer.py"] 
+FROM alpine:edge
+
+
+RUN apk add --no-cache micropython \
+    --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
+
+
+WORKDIR /app
+
+
+COPY mapper_reducer.py .
+
+
+CMD ["micropython", "mapper_reducer.py"]
